@@ -5,7 +5,7 @@ type Question {
     options: [String!]
     answer: String!
     explanation: String
-    link: [String!]
+    links: [String!]
     nb_answered: Int
     nb_success: Int
     created_at: Date
@@ -28,7 +28,7 @@ input AddQuestionInput {
     options: [String!]!
     answer: String!
     explanation: String
-    link: [String!]
+    links: [String!]
 }
 
 input EditQuestionInput {
@@ -37,7 +37,7 @@ input EditQuestionInput {
     options: [String!]
     answer: String
     explanation: String
-    link: [String!]
+    links: [String!]
 }
 
 input SuccessRateInput {
