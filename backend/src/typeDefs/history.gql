@@ -1,0 +1,6 @@
+type History {
+    id: ID!
+    user: User
+    quizz: Quizz
+    created_at: Date
+}

@@ -6,6 +6,8 @@ type Question {
     answer: String!
     explanation: String
     link: [String!]
+    nb_answered: Int
+    nb_success: Int
     created_at: Date
     updated_at: Date
 }
@@ -17,6 +19,7 @@ type Query {
 type Mutation {
     addQuestion(args: AddQuestionInput): Question
     editQuestion(args: EditQuestionInput): Question
+    updateSuccessRate(args: SuccessRateInput): Float
 }
 
 input AddQuestionInput {
@@ -35,4 +38,8 @@ input EditQuestionInput {
     answer: String
     explanation: String
     link: [String!]
+}
+
+input SuccessRateInput {
+    good_answer: booleanls
 }
