@@ -1,0 +1,38 @@
+type Question {
+    id: ID!
+    theme: Theme!
+    question: String!
+    options: [String!]
+    answer: String!
+    explanation: String
+    link: [String!]
+    created_at: Date
+    updated_at: Date
+}
+
+type Query {
+    questions: [Question]
+}
+
+type Mutation {
+    addQuestion(args: AddQuestionInput): Question
+    editQuestion(args: EditQuestionInput): Question
+}
+
+input AddQuestionInput {
+    theme_id: String!
+    question: String!
+    options: [String!]!
+    answer: String!
+    explanation: String
+    link: [String!]
+}
+
+input EditQuestionInput {
+    theme_id: String
+    question: String
+    options: [String!]
+    answer: String
+    explanation: String
+    link: [String!]
+}
